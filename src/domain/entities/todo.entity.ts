@@ -1,4 +1,3 @@
-import { ITodo } from 'src/domain/todo.interface';
 import {
   Column,
   CreateDateColumn,
@@ -6,6 +5,7 @@ import {
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm';
+import { ITodo } from '../interfaces/todo.interface';
 
 @Entity()
 export class Todo implements ITodo {

@@ -25,4 +25,5 @@ declare interface ReservedEnvironmentVariables {
   DATABASE_NAME: string;
   DATABASE_SCHEMA: string;
   DATABASE_SYNCHRONIZE: boolean;
+  NEW_VAR: string;
 }

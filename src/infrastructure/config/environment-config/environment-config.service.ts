@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
-import { DatabaseConfig } from 'src/domain/database.interface';
+import { DatabaseConfig } from 'src/infrastructure/config/environment-config/database.interface';
 import { EnvVariableType } from './env-variable';
 
 @Injectable()
@@ -33,5 +33,9 @@ export class EnvironmentConfigService implements DatabaseConfig {
 
   getDatabaseSync(): boolean {
     return this.configService.getOrThrow<boolean>('DATABASE_SYNCHRONIZE');
+  }
+
+  getNewVar(): string {
+    return this.configService.getOrThrow<string>('NEW_VAR');
   }
 }
